@@ -18,4 +18,23 @@ func main() {
 	fmt.Println("slice dengan tipe data dan value ", slcliteral)
 	fmt.Println("slice tanpa tipe data dengan value ", slicemake)
 	fmt.Println("slice tanpa tipe data dan value ", slicekosong)
+
+	a := 10
+	b := 100
+
+	println("sebelum swapbypointer", a, b)
+	swapbypointer(&a,&b)
+	println(a, b)
+
+	//buat variabel baru karena yg atas sudah kena overwrite
+	c := 10
+	d := 100
+	println("sebelum swapbyvalue", c, d)
+	swapbyvalue(c,d)
+	println(c,d)
+
+	e := []string{"aura", "rieska"}
+	fmt.Println("sebelum updateslide", e)
+	updateslice(&e, "maharani")
+	fmt.Println("sesudah updateslide", e)
 }
