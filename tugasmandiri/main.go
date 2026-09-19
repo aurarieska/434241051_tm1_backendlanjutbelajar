@@ -37,4 +37,21 @@ func main() {
 	fmt.Println("sebelum updateslide", e)
 	updateslice(&e, "maharani")
 	fmt.Println("sesudah updateslide", e)
+
+	println(GetInfo())
+
+	println("masukkan nilai baru")
+	var nilai float64
+	fmt.Scan(&nilai)
+	UpdateGrade(nilai)
+	println("status setelah melalui update nilai")
+	println(GetInfo())
+
+	println("status setelah melalui activate")
+	activate()
+	println(GetInfo())
+
+	println("status setelah melalui deactive")
+	deactive()
+	println(GetInfo())
 }
